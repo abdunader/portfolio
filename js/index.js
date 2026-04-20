@@ -62,4 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (grid) {
     grid.innerHTML = PROJECTS.map(createProjectCard).join("");
   }
+
+  // ── Social Links ────────────────────────────────────────────────────────
+  function renderSocialLinks(containerId, linkClass) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = SOCIAL_LINKS.map(
+      (link) =>
+        `<a href="${link.url}" class="${linkClass}" aria-label="${link.label}" target="_blank" rel="noopener noreferrer">
+          <i class="${link.icon}"></i>
+        </a>`,
+    ).join("");
+  }
+
+  renderSocialLinks("social-sidebar-links", "social-icon");
+  renderSocialLinks("social-mobile-links", "text-secondary-light fs-1");
 });
