@@ -100,4 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (skillsGrid) {
     skillsGrid.innerHTML = SKILLS.map(createSkillBox).join("");
   }
+
+  // ── Random Quote ────────────────────────────────────────────────────────
+  const quoteTextEl = document.getElementById("quote-text");
+  const quoteAuthorEl = document.getElementById("quote-author");
+
+  if (quoteTextEl && quoteAuthorEl && typeof QUOTES !== "undefined" && QUOTES.length) {
+    const randomQuote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+    quoteTextEl.textContent = randomQuote.text;
+    quoteAuthorEl.textContent = `- ${randomQuote.author}`;
+  }
 });
