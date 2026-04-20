@@ -386,7 +386,7 @@ a:hover {
 /* Positions */
 .sd-top-left {
   top: 0;
-  left: 0;
+  left: -80px;
 }
 .sd-top-right {
   top: 10px;
@@ -394,7 +394,7 @@ a:hover {
 }
 .sd-bottom-left {
   bottom: 40px;
-  left: 60px;
+  left: 20px;
 }
 .sd-bottom-left-inner {
   bottom: 20px;
@@ -405,6 +405,6 @@ a:hover {
   right: 0;
 }
 .sd-bottom-right-sm {
-  bottom: 20px;
+  bottom: 10px;
   right: 30px;
 }
