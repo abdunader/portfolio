@@ -41,7 +41,9 @@ body {
   margin: 0; /* Base mobile-first reset */
   padding: 0;
   box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth theme transitions */
 }
 
 a {
@@ -111,6 +113,41 @@ a:hover {
 .dropdown-menu-dark .dropdown-item:focus {
   background-color: rgba(199, 120, 221, 0.2);
   color: var(--text-primary);
+}
+
+/* Mobile Menu Override  */
+@media (max-width: 991.98px) {
+  #navbarContent {
+    background-color: var(--bg-color) !important;
+  }
+
+  /* Large links per screenshot */
+  #navbarContent .navbar-nav .nav-link {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Inline dropdown for mobile */
+  #navbarContent .dropdown-menu {
+    position: static;
+    float: none;
+    border: none;
+    background: transparent;
+    padding-left: 1rem;
+    padding-top: 0;
+  }
+  #navbarContent .dropdown-item {
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+  .mobile-theme-icon {
+    font-size: 2rem !important; /* Matches EN font-weight visually */
+  }
+}
+@media (min-width: 992px) {
+  .mobile-theme-icon {
+    font-size: 1.25rem; /* Equivalent to fs-5 */
+  }
 }
 
 /* Hero */
@@ -204,7 +241,9 @@ a:hover {
 
 /* Project Cards */
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border-radius: 0;
 }
 
@@ -249,8 +288,8 @@ a:hover {
     display: flex; /* Show only on desktop */
   }
   .main-content {
-      max-width: 1024px;
-      margin: 0 auto;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 
