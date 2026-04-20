@@ -1,3 +1,22 @@
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ==========================================================================
+   1. VARIABLES & THEMES
+   2. BASE & TYPOGRAPHY
+   3. COMPONENTS
+      - Buttons
+      - Navbar
+      - Hero
+      - Badges
+      - Quotes
+   4. LAYOUT
+      - Sidebars
+   5. UTILITIES
+   ========================================================================== */
+
+/* ==========================================================================
+   1. VARIABLES & THEMES
+   ========================================================================== */
 :root {
   --bg-color: #282c33;
   --primary-color: #c778dd;
@@ -12,17 +31,17 @@
   --text-secondary: #5c626e;
 }
 
-[data-theme="light"] .nav-logo {
-  filter: none;
-}
-
+/* ==========================================================================
+   2. BASE & TYPOGRAPHY
+   ========================================================================== */
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: "Fira Code", monospace;
-  margin: 0;
+  margin: 0; /* Base mobile-first reset */
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
 }
 
 a {
@@ -35,14 +54,10 @@ a:hover {
   color: var(--text-primary);
 }
 
-.text-primary {
-  color: var(--primary-color) !important;
-}
-
-.text-secondary-light {
-  color: var(--text-secondary);
-}
-
+/* ==========================================================================
+   3. COMPONENTS
+   ========================================================================== */
+/* Buttons */
 .btn-primary-outline {
   border: 1px solid var(--primary-color);
   color: var(--text-primary);
@@ -50,6 +65,7 @@ a:hover {
   padding: 8px 16px;
   font-family: "Fira Code", monospace;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn-primary-outline:hover {
@@ -57,41 +73,14 @@ a:hover {
   color: var(--text-primary);
 }
 
-/* Layout and Navigation */
-.main-content {
-  max-width: 1024px;
-  position: relative;
-}
-
-/* Social Sidebar */
-.social-sidebar {
-  position: fixed;
-  left: 20px;
-  top: 0;
-  width: 32px;
-}
-
-.sidebar-line {
-  width: 2px;
-  height: 200px;
-  background-color: var(--text-secondary);
-  margin-bottom: 10px;
-}
-
-.social-icon {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-}
-
-.social-icon:hover {
-  color: var(--primary-color);
-}
-
-/* Navbar overrides */
+/* Navbar */
 .nav-logo {
   filter: invert(1) brightness(2);
   transition: filter 0.3s ease;
+}
+
+[data-theme="light"] .nav-logo {
+  filter: none;
 }
 
 .navbar-brand span {
@@ -124,12 +113,28 @@ a:hover {
   color: var(--text-primary);
 }
 
-/* Hero Section */
+/* Hero */
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-description {
+  line-height: 1.6;
+}
+
 .hero-img {
   max-width: 100%;
   border-bottom: 1px solid var(--primary-color);
 }
 
+/* Badges */
 .status-badge {
   border: 1px solid var(--text-secondary);
   padding: 8px 16px;
@@ -142,11 +147,20 @@ a:hover {
   height: 16px;
   background-color: var(--primary-color);
   display: inline-block;
+  vertical-align: middle;
 }
 
-/* Quote Section */
+/* Quotes */
 .quote-text {
   border-color: var(--text-secondary) !important;
+  font-size: 1.25rem; /* Base size for mobile */
+}
+
+/* Tablet & Desktop sizes for quotes */
+@media (min-width: 768px) {
+  .quote-text {
+    font-size: 1.5rem;
+  }
 }
 
 .quote-author {
@@ -161,6 +175,7 @@ a:hover {
   background-color: var(--bg-color);
   padding: 0 10px;
   font-size: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .close-quote {
@@ -170,4 +185,99 @@ a:hover {
   background-color: var(--bg-color);
   padding: 0 10px;
   font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Works & Section Titles */
+.section-title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Project Cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(199, 120, 221, 0.1);
+  border-color: var(--primary-color) !important;
+}
+
+.project-card .card-img-top {
+  border-radius: 0;
+  background-color: #282c33; /* Placeholder fallback */
+}
+
+.card.bg-transparent {
+  background-color: var(--bg-color) !important;
+}
+
+/* ==========================================================================
+   4. LAYOUT
+   ========================================================================== */
+.main-content {
+  width: 100%;
+  position: relative;
+}
+
+/* Social Sidebar - Hidden on mobile, shown on desktop
+   We use min-width: 992px to complement Bootstrap's lg breakpoint
+*/
+.social-sidebar {
+  display: none; /* Hide firmly by default */
+  position: fixed;
+  left: 20px;
+  top: 0;
+  width: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .social-sidebar {
+    display: flex; /* Show only on desktop */
+  }
+  .main-content {
+      max-width: 1024px;
+      margin: 0 auto;
+  }
+}
+
+.sidebar-line {
+  width: 2px;
+  height: 200px;
+  background-color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================================================
+   5. UTILITIES
+   ========================================================================== */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary-light {
+  color: var(--text-secondary);
 }
