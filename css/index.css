@@ -5,6 +5,13 @@
   --text-secondary: #abb2bf;
 }
 
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --primary-color: #c778dd;
+  --text-primary: #282c33;
+  --text-secondary: #5c626e;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
@@ -96,6 +103,16 @@ a:hover {
 .dropdown-menu-dark {
   background-color: var(--bg-color);
   border: 1px solid var(--text-secondary);
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: var(--text-secondary);
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+  background-color: rgba(199, 120, 221, 0.2);
+  color: var(--text-primary);
 }
 
 /* Hero Section */
