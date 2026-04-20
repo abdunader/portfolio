@@ -210,8 +210,40 @@
           <a href="#" class="text-primary fw-bold" style="text-decoration: underline;">View all ~~&gt;</a>
         </div>
         
-        <div class="row g-4 justify-content-center" id="projects-grid">
+        <div class="row g-3 justify-content-center" id="projects-grid">
           <!-- Project cards are rendered dynamically from data/projects.json -->
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="mt-5 pt-5 pb-5">
+        <div class="d-flex align-items-center mb-5">
+          <h2 class="section-title fw-bold m-0">
+            <span class="text-primary">#</span>skills
+            <div class="d-none d-md-block ms-3 bg-primary" style="height: 1px; width: 200px;"></div>
+          </h2>
+        </div>
+
+        <div class="row align-items-start g-4">
+          <!-- Decorative left column -->
+          <div class="col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
+            <div class="skills-decoration">
+              <!-- data-shape injects the matching SVG from data/shapes.js -->
+              <div class="sd-item sd-dot-grid sd-top-left"     data-shape="dotGrid"></div>
+              <div class="sd-item sd-square sd-top-right"      data-shape="squareOutline"></div>
+              <div class="sd-item sd-square sd-bottom-left"    data-shape="squareOutline"></div>
+              <div class="sd-item sd-square sd-sm sd-primary sd-bottom-left-inner" data-shape="squareOutline"></div>
+              <div class="sd-item sd-dot-grid sd-bottom-right" data-shape="dotGrid"></div>
+              <div class="sd-item sd-square sd-xs sd-bottom-right-sm" data-shape="squareOutline"></div>
+            </div>
+          </div>
+
+          <!-- Skill category boxes -->
+          <div class="col-12 col-lg-8">
+            <div class="row g-3 " id="skills-grid">
+              <!-- Skill boxes rendered dynamically from data/skills.js -->
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,6 +254,10 @@
     <script src="./data/projects.js"></script>
     <!-- Social Links Data -->
     <script src="./data/social-links.js"></script>
+    <!-- Skills Data -->
+    <script src="./data/skills.js"></script>
+    <!-- Shape SVGs -->
+    <script src="./data/shapes.js"></script>
     <!-- Custom JS -->
     <script src="./js/index.js"></script>
   </body>

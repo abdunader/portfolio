@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+  <!-- Single outlined square — stroke inherits currentColor from CSS -->
+  <rect x="0.5" y="0.5" width="79" height="79"/>
+</svg>

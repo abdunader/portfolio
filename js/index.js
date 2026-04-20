@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ── Shapes ─────────────────────────────────────────────────────────────
+  // Inject SVG markup into any element that has a data-shape attribute
+  document.querySelectorAll("[data-shape]").forEach((el) => {
+    const svg = SHAPES[el.dataset.shape];
+    if (svg) el.innerHTML = svg;
+  });
+
   // ── Theme ──────────────────────────────────────────────────────────────
   const themeToggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
@@ -77,4 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderSocialLinks("social-sidebar-links", "social-icon");
   renderSocialLinks("social-mobile-links", "text-secondary-light fs-1");
+
+  // ── Skills ─────────────────────────────────────────────────────────────
+  function createSkillBox(skill) {
+    return `
+      <div class="col-6 col-md-4">
+        <div class="skill-box">
+          <div class="skill-box-header">${skill.category}</div>
+          <div class="skill-box-body">${skill.items.join(" ")}</div>
+        </div>
+      </div>`;
+  }
+
+  const skillsGrid = document.getElementById("skills-grid");
+  if (skillsGrid) {
+    skillsGrid.innerHTML = SKILLS.map(createSkillBox).join("");
+  }
 });
