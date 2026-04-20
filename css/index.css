@@ -12,6 +12,10 @@
   --text-secondary: #5c626e;
 }
 
+[data-theme="light"] .nav-logo {
+  filter: none;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
@@ -85,6 +89,11 @@ a:hover {
 }
 
 /* Navbar overrides */
+.nav-logo {
+  filter: invert(1) brightness(2);
+  transition: filter 0.3s ease;
+}
+
 .navbar-brand span {
   font-weight: 700;
   color: var(--text-primary);
