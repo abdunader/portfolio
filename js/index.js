@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="p-3">
               <h5 class="card-title fw-bold text-primary">${project.title}</h5>
               <p class="card-text text-secondary-light">${project.description}</p>
-              <a href="${project.liveUrl}" class="btn btn-primary-outline mt-2">Live &lt;~&gt;</a>
+              <a href="${project.liveUrl}" target="_blank" class="btn btn-primary-outline mt-2">Live &lt;~&gt;</a>
             </div>
           </div>
         </div>

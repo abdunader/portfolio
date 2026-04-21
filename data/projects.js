@@ -1,18 +1,18 @@
 // Project data — edit this file to add/remove/update project cards
 const PROJECTS = [
   {
-    title: "ChertNode",
-    description: "Minecraft servers hosting",
-    technologies: ["HTML", "CSS", "Python", "Flask"],
-    liveUrl: "#",
-    image: null,
+    title: "Game Masters",
+    description: "Gaming store for PC, PlayStation, Xbox platforms",
+    technologies: ["HTML5", "CSS3", "JavaScript", "FontAwesome", "AOS"],
+    liveUrl: "https://college-projects-hu.github.io/Game-Masters-IT/",
+    image: "./assets/images/projects/gamemasters.png",
   },
   {
-    title: "ProtectX",
-    description: "Discord anti-crash bot",
-    technologies: ["React", "Express", "Discord.js"],
-    liveUrl: "#",
-    image: null,
+    title: "Bakery",
+    description: "Family bakery showcase website with responsive design",
+    technologies: ["HTML5", "CSS3"],
+    liveUrl: "https://abdunader.github.io/Bakery/",
+    image: "./assets/images/projects/bakery.png",
   },
   {
     title: "Kahoot Answers",
