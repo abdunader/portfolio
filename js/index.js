@@ -39,6 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // ── Back To Top ──────────────────────────────────────────────────────────
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  function toggleBackToTopButton() {
+    if (!backToTopBtn) return;
+    backToTopBtn.classList.toggle("is-visible", window.scrollY > 280);
+  }
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", toggleBackToTopButton, { passive: true });
+    toggleBackToTopButton();
+  }
+
   // ── Projects ───────────────────────────────────────────────────────────
   function createProjectCard(project) {
     const techList = project.technologies.join(" ");
