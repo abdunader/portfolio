@@ -15,10 +15,17 @@ const PROJECTS = [
     image: "./assets/images/projects/bakery.png",
   },
   {
-    title: "Kahoot Answers",
-    description: "Get answers to your kahoot quiz",
-    technologies: ["Vue.js", "Node.js", "MongoDB"],
-    liveUrl: "#",
-    image: null,
+    title: "Mealify",
+    description: "Responsive restaurant landing page with modern design",
+    technologies: ["HTML5", "CSS3", "FontAwesome"],
+    liveUrl: "https://abdunader.github.io/Mealify/",
+    image: "./assets/images/projects/mealify.png",
+  },
+  {
+    title: "Fokir",
+    description: "Professional portfolio website for designers and developers",
+    technologies: ["HTML5", "CSS3", "FontAwesome"],
+    liveUrl: "https://abdunader.github.io/fokir/",
+    image: "./assets/images/projects/fokir.png",
   },
 ];
