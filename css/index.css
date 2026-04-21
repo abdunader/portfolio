@@ -491,8 +491,8 @@ a:hover {
 .about-dot-grid--bottom-left {
   width: 90px;
   height: 90px;
-  bottom: -10px;
-  left: -30px;
+  bottom: -30px;
+  left: -50px;
   z-index: 2;
 }
 
