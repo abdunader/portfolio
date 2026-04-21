@@ -109,8 +109,8 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contacts"
-                    ><span class="text-primary">#</span>contacts</a
+                  <a class="nav-link" href="#contact"
+                    ><span class="text-primary">#</span>contact</a
                   >
                 </li>
                 <!-- Theme toggle -->
@@ -151,7 +151,7 @@
               He crafts responsive websites where technologies<br />meet
               creativity
             </p>
-            <a href="#contacts" class="btn btn-primary-outline"
+            <a href="#contact" class="btn btn-primary-outline"
               >Contact me !</a
             >
           </div>
@@ -276,7 +276,7 @@
             <p class="text-secondary-light mb-4 ">
              I always strive to learn
               about the newest technologies and frameworks.</p>
-            <a href="#contacts" class="btn btn-primary-outline "
+            <a href="#contact" class="btn btn-primary-outline "
               >Read more <i class="fa-solid fa-arrow-right"></i></a
             >
           </div>
@@ -298,31 +298,45 @@
         </div>
       </section>
 
-      <!-- Contacts Section -->
-      <section id="contacts" class="mt-5 pt-5 pb-5">
+      <!-- Contact Section -->
+      <section id="contact" class="mt-5 pt-5 pb-5">
         <div class="d-flex align-items-center mb-5">
           <h2 class="section-title fw-bold m-0">
-            <span class="text-primary">#</span>contacts
+            <span class="text-primary">#</span>contact
           </h2>
           <div class="d-none d-md-block flex-grow-1 ms-3 bg-primary" style="height: 1px; max-width: 220px;"></div>
         </div>
 
         <div class="row g-4 align-items-start">
-          <div class="col-12 col-lg-7">
+          <div class="col-12 col-lg-6">
             <p class="text-secondary-light contacts-text mb-0">
               I am currently open to freelance opportunities and collaboration.
               If you have a project in mind or just want to say hello, feel free to reach out.
             </p>
+            <div class="sd-item sd-square sd-xs sd-bottom-left-sm" data-shape="squareOutline"></div>
+            <div class="sd-item sd-dot-grid sd-bottom-right" data-shape="dotGrid"></div>
           </div>
-          <div class="col-12 col-lg-5 d-flex justify-content-lg-end">
-            <div class="contact-card">
-              <h5 class="mb-3">Message me here</h5>
-              <a class="contact-item" href="mailto:abdunader.work@gmail.com">
-                <i class="fa-regular fa-envelope"></i>
-                <span>abdunh177gmail.com</span>
-              </a>
-              <div id="contact-social-links" class="d-flex gap-3 mt-3"></div>
-            </div>
+
+          <div class="col-12 col-lg-6">
+            <form class="contact-form" action="#" method="post">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <input type="text" class="contact-input" name="name" placeholder="Name" aria-label="Name" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <input type="email" class="contact-input" name="email" placeholder="Email" aria-label="Email" />
+                </div>
+                <div class="col-12">
+                  <input type="text" class="contact-input" name="title" placeholder="Title" aria-label="Title" />
+                </div>
+                <div class="col-12">
+                  <textarea class="contact-input contact-textarea" name="message" placeholder="Message" aria-label="Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-outline">Send</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>

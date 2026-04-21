@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderSocialLinks("social-sidebar-links", "social-icon");
   renderSocialLinks("social-mobile-links", "text-secondary-light fs-1");
-  renderSocialLinks("contact-social-links", "contact-social-icon");
   renderSocialLinks("footer-social-links", "footer-social-icon");
 
   // ── Skills ─────────────────────────────────────────────────────────────

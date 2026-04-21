@@ -498,43 +498,49 @@ a:hover {
 
 /* Contacts + Footer */
 .contacts-text {
-  max-width: 620px;
+  max-width: 520px;
   line-height: 1.8;
 }
 
-.contact-card {
+.contact-form {
+  max-width: 100%;
+}
+
+.contact-input {
   width: 100%;
-  max-width: 340px;
   border: 1px solid var(--text-secondary);
-  padding: 16px;
   background-color: transparent;
-}
-
-.contact-card h5 {
   color: var(--text-primary);
-  font-size: 1.05rem;
+  padding: 12px 14px;
+  font-family: "Fira Code", monospace;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
 }
 
-.contact-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.contact-input::placeholder {
   color: var(--text-secondary);
-  transition: color 0.3s ease;
+  opacity: 1;
 }
 
-.contact-item:hover {
-  color: var(--primary-color);
+.contact-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
 }
 
-.contact-social-icon,
+.contact-textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
 .footer-social-icon {
   color: var(--text-secondary);
   font-size: 1.15rem;
   transition: color 0.3s ease;
 }
 
-.contact-social-icon:hover,
 .footer-social-icon:hover {
   color: var(--primary-color);
 }
