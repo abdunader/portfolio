@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Replace these placeholders with your EmailJS values from dashboard.
+  const EMAILJS_CONFIG = {
+    publicKey: "3hP4KRI5AHiUNsiqp",
+    serviceId: "service_uz5uexj",
+    templateId: "template_qu9nr99",
+  };
+
   // ── Shapes ─────────────────────────────────────────────────────────────
   // Inject SVG markup into any element that has a data-shape attribute
   document.querySelectorAll("[data-shape]").forEach((el) => {
@@ -123,7 +130,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const quoteTextEl = document.getElementById("quote-text");
   const quoteAuthorEl = document.getElementById("quote-author");
 
-  if (quoteTextEl && quoteAuthorEl && typeof QUOTES !== "undefined" && QUOTES.length) {
+  if (
+    quoteTextEl &&
+    quoteAuthorEl &&
+    typeof QUOTES !== "undefined" &&
+    QUOTES.length
+  ) {
     const randomQuote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
     quoteTextEl.textContent = randomQuote.text;
     quoteAuthorEl.textContent = `- ${randomQuote.author}`;
@@ -133,5 +145,134 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerYear = document.getElementById("footer-year");
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
+  }
+
+  // ── Contact Form (EmailJS) ─────────────────────────────────────────────
+  const contactForm = document.getElementById("contact-form");
+  const contactSubmitBtn = document.getElementById("contact-submit-btn");
+  const contactStatus = document.getElementById("contact-form-status");
+  const contactName = document.getElementById("contact-name");
+  const contactEmail = document.getElementById("contact-email");
+  const contactTitle = document.getElementById("contact-title");
+  const contactMessage = document.getElementById("contact-message");
+  const contactHoneypot = document.getElementById("contact-company");
+
+  const requiredFields = [
+    contactName,
+    contactEmail,
+    contactTitle,
+    contactMessage,
+  ].filter(Boolean);
+  const hasEmailJsConfig = Object.values(EMAILJS_CONFIG).every(
+    (value) => value && !value.startsWith("YOUR_EMAILJS_"),
+  );
+
+  function showContactStatus(message, type = "error") {
+    if (!contactStatus) return;
+    contactStatus.textContent = message;
+    contactStatus.classList.remove("is-success", "is-error");
+    contactStatus.classList.add(type === "success" ? "is-success" : "is-error");
+  }
+
+  function clearContactStatus() {
+    if (!contactStatus) return;
+    contactStatus.textContent = "";
+    contactStatus.classList.remove("is-success", "is-error");
+  }
+
+  function setFieldState(field, isInvalid) {
+    if (!field) return;
+    field.classList.toggle("is-invalid", isInvalid);
+  }
+
+  function validateContactForm() {
+    let isValid = true;
+
+    requiredFields.forEach((field) => {
+      const value = field.value.trim();
+      let invalid = false;
+
+      if (!value) invalid = true;
+      if (!invalid && field === contactEmail)
+        invalid = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      if (!invalid && field === contactName) invalid = value.length < 2;
+      if (!invalid && field === contactTitle) invalid = value.length < 3;
+      if (!invalid && field === contactMessage) invalid = value.length < 10;
+
+      setFieldState(field, invalid);
+      if (invalid) isValid = false;
+    });
+
+    return isValid;
+  }
+
+  function setSubmitLoading(isLoading) {
+    if (!contactSubmitBtn) return;
+    contactSubmitBtn.disabled = isLoading;
+    contactSubmitBtn.textContent = isLoading ? "Sending..." : "Send";
+  }
+
+  if (window.emailjs && hasEmailJsConfig) {
+    window.emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+  }
+
+  if (contactForm) {
+    requiredFields.forEach((field) => {
+      field.addEventListener("input", () => {
+        setFieldState(field, false);
+        clearContactStatus();
+      });
+    });
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearContactStatus();
+
+      if (contactHoneypot && contactHoneypot.value.trim()) {
+        showContactStatus(
+          "Unable to send your message right now. Please try again.",
+        );
+        return;
+      }
+
+      const isValid = validateContactForm();
+      if (!isValid) {
+        showContactStatus("Please fill all fields correctly before sending.");
+        return;
+      }
+
+      if (!window.emailjs || !hasEmailJsConfig) {
+        showContactStatus(
+          "Contact form is not configured yet. Add EmailJS credentials in js/index.js.",
+        );
+        return;
+      }
+
+      setSubmitLoading(true);
+
+      try {
+        await window.emailjs.send(
+          EMAILJS_CONFIG.serviceId,
+          EMAILJS_CONFIG.templateId,
+          {
+            from_name: contactName.value.trim(),
+            reply_to: contactEmail.value.trim(),
+            title: contactTitle.value.trim(),
+            message: contactMessage.value.trim(),
+          },
+        );
+
+        contactForm.reset();
+        requiredFields.forEach((field) => setFieldState(field, false));
+        showContactStatus(
+          "Message sent successfully. I will get back to you soon.",
+          "success",
+        );
+      } catch (error) {
+        showContactStatus("Sending failed. Please try again in a moment.");
+      } finally {
+        setSubmitLoading(false);
+      }
+    });
   }
 });

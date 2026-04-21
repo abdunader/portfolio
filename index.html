@@ -318,22 +318,78 @@
           </div>
 
           <div class="col-12 col-lg-6">
-            <form class="contact-form" action="#" method="post">
+            <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
               <div class="row g-3">
                 <div class="col-12 col-md-6">
-                  <input type="text" class="contact-input" name="name" placeholder="Name" aria-label="Name" />
+                  <input
+                    id="contact-name"
+                    type="text"
+                    class="contact-input"
+                    name="name"
+                    placeholder="Name"
+                    aria-label="Name"
+                    required
+                    minlength="2"
+                    maxlength="80"
+                    autocomplete="name"
+                  />
                 </div>
                 <div class="col-12 col-md-6">
-                  <input type="email" class="contact-input" name="email" placeholder="Email" aria-label="Email" />
+                  <input
+                    id="contact-email"
+                    type="email"
+                    class="contact-input"
+                    name="email"
+                    placeholder="Email"
+                    aria-label="Email"
+                    required
+                    maxlength="120"
+                    autocomplete="email"
+                  />
                 </div>
                 <div class="col-12">
-                  <input type="text" class="contact-input" name="title" placeholder="Title" aria-label="Title" />
+                  <input
+                    id="contact-title"
+                    type="text"
+                    class="contact-input"
+                    name="title"
+                    placeholder="Title"
+                    aria-label="Title"
+                    required
+                    minlength="3"
+                    maxlength="120"
+                  />
                 </div>
                 <div class="col-12">
-                  <textarea class="contact-input contact-textarea" name="message" placeholder="Message" aria-label="Message"></textarea>
+                  <textarea
+                    id="contact-message"
+                    class="contact-input contact-textarea"
+                    name="message"
+                    placeholder="Message"
+                    aria-label="Message"
+                    required
+                    minlength="10"
+                    maxlength="1500"
+                  ></textarea>
+                </div>
+                <div class="col-12 contact-honeypot" aria-hidden="true">
+                  <input
+                    id="contact-company"
+                    type="text"
+                    class="contact-input"
+                    name="company"
+                    tabindex="-1"
+                    autocomplete="off"
+                    placeholder="Company"
+                  />
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary-outline">Send</button>
+                  <button id="contact-submit-btn" type="submit" class="btn btn-primary-outline contact-submit-btn">
+                    Send
+                  </button>
+                </div>
+                <div class="col-12">
+                  <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
                 </div>
               </div>
             </form>
@@ -386,6 +442,8 @@
     <script src="./data/shapes.js"></script>
     <!-- Quotes Data -->
     <script src="./data/quotes.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Custom JS -->
     <script src="./js/index.js"></script>
   </body>
