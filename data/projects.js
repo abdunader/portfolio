@@ -5,6 +5,7 @@ const PROJECTS = [
     description: "Gaming store for PC, PlayStation, Xbox platforms",
     technologies: ["HTML5", "CSS3", "JavaScript", "FontAwesome", "AOS"],
     liveUrl: "https://college-projects-hu.github.io/Game-Masters-IT/",
+    githubUrl: "https://github.com/College-Projects-HU/Game-Masters-IT",
     image: "./assets/images/projects/gamemasters.png",
   },
   {

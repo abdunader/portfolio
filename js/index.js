@@ -66,6 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Projects ───────────────────────────────────────────────────────────
   function createProjectCard(project) {
     const techList = project.technologies.join(" ");
+    const actionButtons = [];
+    if (project.liveUrl) {
+      actionButtons.push(
+        `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary-outline mt-2">Live &lt;~&gt;</a>`,
+      );
+    }
+    if (project.githubUrl) {
+      actionButtons.push(
+        `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary-outline mt-2">GitHub</a>`,
+      );
+    }
 
     const imageSection = project.image
       ? `<img src="${project.image}" alt="${project.title}" class="card-img-top border-bottom border-secondary" style="height:200px;object-fit:cover;">`
@@ -82,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="p-3">
               <h5 class="card-title fw-bold text-primary">${project.title}</h5>
               <p class="card-text text-secondary-light">${project.description}</p>
-              <a href="${project.liveUrl}" target="_blank" class="btn btn-primary-outline mt-2">Live &lt;~&gt;</a>
+              ${actionButtons.length ? `<div class="d-flex flex-wrap gap-2">${actionButtons.join("")}</div>` : ""}
             </div>
           </div>
         </div>
