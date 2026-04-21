@@ -13,11 +13,11 @@ const SKILLS = [
     items: ["VSCode", "Neovim", "Linux", "Figma", "Git", "Font Awesome"],
   },
   {
-    category: "Other",
-    items: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
-  },
-  {
     category: "Frameworks",
     items: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
+  },
+  {
+    category: "Other",
+    items: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
   },
 ];

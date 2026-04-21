@@ -3,16 +3,16 @@ const SOCIAL_LINKS = [
   {
     label: "GitHub",
     icon: "fa-brands fa-github",
-    url: "#",
+    url: "https://github.com/abdunader",
   },
   {
     label: "LinkedIn",
     icon: "fa-brands fa-linkedin",
-    url: "#",
+    url: "https://www.linkedin.com/in/abdulrahman-nader",
   },
   {
     label: "Upwork",
     icon: "fa-brands fa-upwork",
-    url: "#",
+    url: "https://www.upwork.com/freelancers/~01050c889db0bc726f",
   },
 ];
