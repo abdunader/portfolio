@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderSocialLinks("social-sidebar-links", "social-icon");
   renderSocialLinks("social-mobile-links", "text-secondary-light fs-1");
+  renderSocialLinks("contact-social-links", "contact-social-icon");
+  renderSocialLinks("footer-social-links", "footer-social-icon");
 
   // ── Skills ─────────────────────────────────────────────────────────────
   function createSkillBox(skill) {
@@ -126,5 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomQuote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
     quoteTextEl.textContent = randomQuote.text;
     quoteAuthorEl.textContent = `- ${randomQuote.author}`;
+  }
+
+  // ── Footer Year ──────────────────────────────────────────────────────────
+  const footerYear = document.getElementById("footer-year");
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
   }
 });
