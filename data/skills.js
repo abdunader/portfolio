@@ -2,22 +2,22 @@
 const SKILLS = [
   {
     category: "Languages",
-    items: ["TypeScript", "Lua", "Python", "JavaScript"],
+    items: ["TypeScript", "JavaScript", "Python", "C", "C++", "Java"],
   },
   {
     category: "Databases",
-    items: ["SQLite", "PostgreSQL", "Mongo"],
+    items: ["SQLite", "MySQL", "PostgreSQL", "Firebase", "MongoDB"],
   },
   {
     category: "Tools",
-    items: ["VSCode", "Neovim", "Linux", "Figma", "Git", "Font Awesome"],
+    items: ["VSCode", "Git & GitHub", "Linux", "Figma"],
   },
   {
     category: "Frameworks",
-    items: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
+    items: ["Bootstrap", "React.js", "Node.js", "Express.js"],
   },
   {
     category: "Other",
-    items: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
+    items: ["HTML5", "CSS3", "REST APIs", "JSON", "XML"],
   },
 ];

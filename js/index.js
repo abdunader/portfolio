@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="col-6 col-md-4">
         <div class="skill-box">
           <div class="skill-box-header">${skill.category}</div>
-          <div class="skill-box-body">${skill.items.join(" ")}</div>
+          <div class="skill-box-body">${skill.items.join(", ")}</div>
         </div>
       </div>`;
   }
