@@ -40,6 +40,8 @@
       <!-- Social icons rendered from data/social-links.js -->
       <div id="social-sidebar-links" class="d-flex flex-column align-items-center"></div>
     </div>
+    <div class="social-sidebar-box d-none d-lg-block"    data-shape="squareOutline"></div>
+
 
     <div class="main-content container pt-3">
       <!-- Navigation -->
@@ -50,7 +52,7 @@
               src="./assets/images/logo.png"
               alt="Logo"
               height="30"
-              class="nav-logo"
+              class="logo"
             />
             <span class="font-weight-bold">Abdelrahman</span>
           </a>
@@ -132,7 +134,7 @@
       </nav>
 
       <!-- Hero Section -->
-      <main class="mt-5 pt-lg-5">
+      <main class="mt-5 pt-lg-5" id="home">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
             <h1
@@ -160,7 +162,7 @@
               <img
                 src="./assets/images/landing.png"
                 class="img-fluid hero-img"
-                alt="Elias Image"
+                alt="Abdelrahman Image"
               />
               <div
                 class="status-badge d-flex align-items-center justify-content-center gap-2  mx-auto"
@@ -202,13 +204,13 @@
       </section>
 
       <!-- projects Section -->
-      <section id="works" class="mt-5 pt-5 pb-5">
-        <div class="d-flex justify-content-between align-items-center mb-5">
+      <section id="projects" class="mt-5 pt-5 pb-5">
+        <div class="d-flex  align-items-center mb-5">
           <h2 class="section-title fw-bold m-0">
             <span class="text-primary">#</span>projects
-            <div class="d-none d-md-block flex-grow-1 ms-3 bg-primary" style="height: 1px; max-width: 300px;"></div>
           </h2>
-          <a href="#" class="text-primary fw-bold" style="text-decoration: underline;">View all ~~&gt;</a>
+          <div class="d-none d-md-block flex-grow-1 ms-3 bg-primary" style="height: 1px; max-width: 500px;"></div>
+          <a href="#" class="text-primary fw-bold ms-auto" style="text-decoration: underline;">View all ~~&gt;</a>
         </div>
         
         <div class="row g-3 justify-content-center" id="projects-grid">
@@ -232,10 +234,10 @@
               <!-- data-shape injects the matching SVG from data/shapes.js -->
               <div class="sd-item sd-dot-grid sd-top-left"     data-shape="dotGrid"></div>
               <div class="sd-item sd-square sd-top-right"      data-shape="squareOutline"></div>
-              <div class="sd-item sd-square sd-bottom-left"    data-shape="squareOutline"></div>
+              <img src="./assets/images/logo.png" class="logo sd-item sd-square sd-bottom-left"    ></img>
               <div class="sd-item sd-square sd-sm sd-primary sd-bottom-left-inner" data-shape="squareOutline"></div>
               <div class="sd-item sd-dot-grid sd-bottom-right" data-shape="dotGrid"></div>
-              <div class="sd-item sd-square sd-xs sd-bottom-right-sm" data-shape="squareOutline"></div>
+              <div class="sd-item sd-square sd-xs sd-bottom-left-sm" data-shape="squareOutline"></div>
             </div>
           </div>
 
@@ -244,6 +246,54 @@
             <div class="row g-3 " id="skills-grid">
               <!-- Skill boxes rendered dynamically from data/skills.js -->
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-me" class="mt-5 pt-5 pb-5 row">
+        
+        <!-- Text Column -->
+        <div class="col-12 col-lg-6 pe-lg-5">
+          <div class="d-flex flex-row align-items-center mb-5">
+            <h2 class="section-title fw-bold m-0">
+              <span class="text-primary">#</span>about-me
+            </h2>
+            <div class="d-none d-md-block ms-3 bg-primary" style="height: 1px; max-width: 400px; flex-grow: 1;"></div>
+          </div>
+          <div>
+            <p class="fw-bold mb-4">Hello, I'm Abdelrahman!</p>
+            <p class="text-secondary-light mb-4 ">
+              I'm a self-taught front-end developer based in Cairo, Egypt.
+              <br>
+              I can develop responsive websites from scratch and raise them
+              into modern user-friendly web experiences.
+            </p>
+            <p class="text-secondary-light mb-4 ">
+              Transforming my creativity and knowledge into websites has been
+              my passion for over a year. I have been helping various clients
+              to establish their presence online.
+            </p>
+            <p class="text-secondary-light mb-4 ">
+             I always strive to learn
+              about the newest technologies and frameworks.</p>
+            <a href="#contacts" class="btn btn-primary-outline "
+              >Read more <i class="fa-solid fa-arrow-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- Image Column with decorations -->
+        <div class="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
+          <div class="position-relative">
+            <!-- Top-right dot grid -->
+            <div class="about-dot-grid about-dot-grid--top-right" data-shape="dotGrid"></div>
+            <!-- Bottom-left dot grid -->
+            <img
+            src="./assets/images/about.png"
+            class="img-fluid about-img"
+            alt="Abdelrahman Nader"
+            />
+            <div class="about-dot-grid about-dot-grid--bottom-left" data-shape="dotGrid"></div>
           </div>
         </div>
       </section>
