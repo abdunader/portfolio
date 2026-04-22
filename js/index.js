@@ -98,19 +98,34 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>`;
   }
 
+  function initMasonry(elementId) {
+    const el = document.getElementById(elementId);
+    if (el && window.Masonry) {
+      // Masonry configuration
+      new Masonry(el, {
+        percentPosition: true
+      });
+    }
+  }
+
   const grid = document.getElementById("projects-grid");
   if (grid && typeof PROJECTS !== "undefined") {
     grid.innerHTML = PROJECTS.map(createProjectCard).join("");
+    // Give images a moment to calculate height before running layout,
+    // though object-fit CSS already establishes sizing nicely.
+    setTimeout(() => initMasonry("projects-grid"), 50);
   }
 
   const completeAppsGrid = document.getElementById("complete-apps-grid");
   if (completeAppsGrid && typeof PROJECTS !== "undefined") {
     completeAppsGrid.innerHTML = PROJECTS.map(createProjectCard).join("");
+    setTimeout(() => initMasonry("complete-apps-grid"), 50);
   }
 
   const smallProjectsGrid = document.getElementById("small-projects-grid");
   if (smallProjectsGrid && typeof SMALL_PROJECTS !== "undefined") {
     smallProjectsGrid.innerHTML = SMALL_PROJECTS.map(createProjectCard).join("");
+    setTimeout(() => initMasonry("small-projects-grid"), 50);
   }
 
   // ── Social Links ────────────────────────────────────────────────────────
@@ -143,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsGrid = document.getElementById("skills-grid");
   if (skillsGrid) {
     skillsGrid.innerHTML = SKILLS.map(createSkillBox).join("");
+    setTimeout(() => initMasonry("skills-grid"), 50);
   }
 
   // ── Random Quote ────────────────────────────────────────────────────────
