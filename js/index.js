@@ -80,13 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const imageSection = project.image
       ? `<img src="${project.image}" alt="${project.title}" class="card-img-top border-bottom border-secondary" style="height:200px;object-fit:cover;">`
-      : `<div class="card-img-top border-bottom border-secondary d-flex align-items-center justify-content-center text-secondary-light" style="height:200px;">
-           <i class="fa-solid fa-image fa-3x"></i>
-         </div>`;
+      : "";
 
     return `
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card bg-transparent border-secondary project-card h-100">
+        <div class="card bg-transparent border-secondary project-card">
           ${imageSection}
           <div class="card-body p-0">
             <p class="text-secondary-light mb-0 small p-3 border-bottom border-secondary">${techList}</p>
@@ -101,8 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const grid = document.getElementById("projects-grid");
-  if (grid) {
+  if (grid && typeof PROJECTS !== "undefined") {
     grid.innerHTML = PROJECTS.map(createProjectCard).join("");
+  }
+
+  const completeAppsGrid = document.getElementById("complete-apps-grid");
+  if (completeAppsGrid && typeof PROJECTS !== "undefined") {
+    completeAppsGrid.innerHTML = PROJECTS.map(createProjectCard).join("");
+  }
+
+  const smallProjectsGrid = document.getElementById("small-projects-grid");
+  if (smallProjectsGrid && typeof SMALL_PROJECTS !== "undefined") {
+    smallProjectsGrid.innerHTML = SMALL_PROJECTS.map(createProjectCard).join("");
   }
 
   // ── Social Links ────────────────────────────────────────────────────────
