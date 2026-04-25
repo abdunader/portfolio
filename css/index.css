@@ -977,7 +977,7 @@ a:hover {
 
 .hire-platforms-card {
   /* border: 1px solid var(--text-secondary); */
-  padding: 1rem;
+  padding: 0 1.25rem 1.25rem 0;
 }
 
 .hire-platforms-card__title {
