@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdelrahman Nader About</title>
+    <title>Abdelrahman Nader Contact</title>
     <link
       id="favicon"
       rel="icon"
@@ -97,12 +97,12 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="./about.html"
+                  <a class="nav-link" href="./about.html"
                     ><span class="text-primary">#</span>about-me</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./contact.html"
+                  <a class="nav-link active" href="./contact.html"
                     ><span class="text-primary">#</span>contact</a
                   >
                 </li>
@@ -126,98 +126,127 @@
         </div>
       </nav>
 
-      <main class="mt-5 pt-lg-5 pb-5 about-page-main">
+      <main class="mt-5 pt-lg-5 pb-5 contact-page-main">
+        <!-- <div
+          class="contact-page-decoration contact-page-decoration--top-right d-none d-lg-block"
+          data-shape="dotGrid"></div> -->
         <div
-          class="about-page-decoration about-page-decoration--top-right d-none d-lg-block"
+          class="contact-page-decoration contact-page-decoration--mid-left d-none d-lg-block"
           data-shape="dotGrid"></div>
-        <div
-          class="about-page-decoration about-page-decoration--mid-left d-none d-lg-block"
-          data-shape="dotGrid"></div>
-        <div
-          class="about-page-decoration about-page-decoration--bottom-right d-none d-lg-block"
-          data-shape="squareOutline"></div>
 
-        <section class="mb-5 pb-lg-5">
-          <div class="row align-items-center gy-5">
+        <section class="mb-5 pb-lg-4">
+          <h1 class="fw-bold m-0" style="font-size: 2rem">
+            <span class="text-primary">/</span>contacts
+          </h1>
+          <div class="row gy-5 align-items-start">
             <div class="col-12 col-lg-6">
-              <h1 class="fw-bold m-0" style="font-size: 2rem">
-                <span class="text-primary">/</span>about-me
-              </h1>
-              <p class="page-eyebrow fw-bold mt-3">Who am I?</p>
-              <div id="about-intro" class="about-page-copy mt-5"></div>
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <a href="./projects.html" class="btn btn-primary-outline"
-                  >View Projects</a
-                >
-                <a href="./contact.html" class="btn btn-secondary-outline"
-                  >Contact Me</a
-                >
-              </div>
+              <p id="contact-page-eyebrow" class="page-eyebrow fw-bold mt-3">
+                How to reach me
+              </p>
+              <div id="contact-page-intro" class="contact-page-copy mt-5"></div>
             </div>
 
-            <div class="col-12 col-lg-6 justify-content-center d-flex">
-              <div class="about-hero-visual">
-                <div class="about-hero-frame">
-                  <div
-                    class="about-floating-grid about-floating-grid--left"
-                    data-shape="dotGrid"></div>
-                  <img
-                    src="./assets/images/about.png"
-                    alt="Abdelrahman Nader"
-                    class="about-page-img ms-auto img-fluid" />
-                  <div
-                    class="about-floating-grid about-floating-grid--right"
-                    data-shape="dotGrid"></div>
-                </div>
-              </div>
+            <div class="col-12 col-lg-6">
+              <div id="all-media-links" class="all-media-list"></div>
             </div>
           </div>
         </section>
 
-        <section id="skills" class="mb-5 py-lg-5">
-          <div class="d-flex align-items-center mb-5">
+        <section class="py-lg-5">
+          <div class="d-flex align-items-center mb-4">
             <h2 class="section-title fw-bold m-0">
-              <span class="text-primary">#</span>skills
+              <span class="text-primary">#</span>message-me
             </h2>
-            <div
-              class="d-none d-md-block flex-grow-1 ms-3 bg-primary"
-              style="height: 1px; max-width: 260px"></div>
           </div>
-
-          <div class="row g-3" id="skills-grid"></div>
-        </section>
-
-        <section class="py-lg-5 about-facts-section">
-          <div class="row align-items-start gy-5">
+          <div class="row gy-5 align-items-start">
             <div class="col-12 col-lg-7">
-              <div class="d-flex align-items-center mb-5">
-                <h2 class="section-title fw-bold m-0">
-                  <span class="text-primary">#</span>my-fun-facts
-                </h2>
-              </div>
-
-              <div class="row g-3" id="about-highlights"></div>
+              <form
+                id="contact-form"
+                class="contact-form contact-page-form ms-lg-auto"
+                action="#"
+                method="post"
+                novalidate>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <input
+                      id="contact-name"
+                      type="text"
+                      class="contact-input"
+                      name="name"
+                      placeholder="Name"
+                      aria-label="Name"
+                      required
+                      minlength="2"
+                      maxlength="80"
+                      autocomplete="name" />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input
+                      id="contact-email"
+                      type="email"
+                      class="contact-input"
+                      name="email"
+                      placeholder="Email"
+                      aria-label="Email"
+                      required
+                      maxlength="120"
+                      autocomplete="email" />
+                  </div>
+                  <div class="col-12">
+                    <input
+                      id="contact-title"
+                      type="text"
+                      class="contact-input"
+                      name="title"
+                      placeholder="Project title"
+                      aria-label="Project title"
+                      required
+                      minlength="3"
+                      maxlength="120" />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      id="contact-message"
+                      class="contact-input contact-textarea"
+                      name="message"
+                      placeholder="Tell me about your project"
+                      aria-label="Message"
+                      required
+                      minlength="10"
+                      maxlength="1500"></textarea>
+                  </div>
+                  <div class="col-12 contact-honeypot" aria-hidden="true">
+                    <input
+                      id="contact-company"
+                      type="text"
+                      class="contact-input"
+                      name="company"
+                      tabindex="-1"
+                      autocomplete="off"
+                      placeholder="Company" />
+                  </div>
+                  <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
+                    <button
+                      id="contact-submit-btn"
+                      type="submit"
+                      class="btn btn-primary-outline contact-submit-btn">
+                      Send
+                    </button>
+                    <p
+                      id="contact-form-status"
+                      class="contact-form-status mb-0"
+                      role="status"
+                      aria-live="polite"></p>
+                  </div>
+                </div>
+              </form>
             </div>
 
-            <div class="col-12 col-lg-5 d-flex justify-content-center">
-              <div class="about-facts-visual">
-                <div
-                  class="about-facts-shape about-facts-shape--grid-top"
-                  data-shape="dotGrid"></div>
-                <div
-                  class="about-facts-shape about-facts-shape--grid-bottom"
-                  data-shape="dotGrid"></div>
-                <div
-                  class="about-facts-shape about-facts-shape--square-back"
-                  data-shape="squareOutline"></div>
-                <div
-                  class="about-facts-shape about-facts-shape--square-front"
-                  data-shape="squareOutline"></div>
-                <img
-                  src="./assets/images/logo.png"
-                  alt="Abdelrahman logo"
-                  class="about-facts-logo logo" />
-              </div>
+            <div class="col-12 col-lg-5">
+              <article class="hire-platforms-card">
+                <h2 class="hire-platforms-card__title">Hire me on</h2>
+                <div id="freelance-links" class="hire-platforms-list"></div>
+              </article>
             </div>
           </div>
         </section>
@@ -264,10 +293,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./data/social-links.js"></script>
-    <script src="./data/skills.js"></script>
-    <script src="./data/about.js"></script>
+    <script src="./data/contact.js"></script>
     <script src="./data/shapes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

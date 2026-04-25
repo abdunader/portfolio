@@ -177,9 +177,83 @@ document.addEventListener("DOMContentLoaded", () => {
   if (aboutHighlights && typeof ABOUT_CONTENT !== "undefined") {
     aboutHighlights.innerHTML = ABOUT_CONTENT.funFacts
       .map(
-        (item) => `<div class="col-auto"><div class="about-pill">${item}</div></div>`,
+        (item) =>
+          `<div class="col-auto"><div class="about-pill">${item}</div></div>`,
       )
       .join("");
+  }
+
+  // ── Contact Page Content ────────────────────────────────────────────────
+  const contactPageEyebrow = document.getElementById("contact-page-eyebrow");
+  const contactPageIntro = document.getElementById("contact-page-intro");
+  const contactCards = document.getElementById("contact-cards");
+  const allMediaLinks = document.getElementById("all-media-links");
+  const freelanceLinks = document.getElementById("freelance-links");
+
+  if (
+    typeof CONTACT_PAGE_CONTENT !== "undefined" &&
+    contactPageEyebrow &&
+    contactPageIntro
+  ) {
+    contactPageEyebrow.textContent = CONTACT_PAGE_CONTENT.eyebrow;
+    contactPageIntro.innerHTML = CONTACT_PAGE_CONTENT.intro
+      .map(
+        (paragraph) => `<p class="text-secondary-light mb-4">${paragraph}</p>`,
+      )
+      .join("");
+  }
+
+  if (
+    typeof CONTACT_PAGE_CONTENT !== "undefined" &&
+    contactCards &&
+    CONTACT_PAGE_CONTENT.cards?.length
+  ) {
+    contactCards.innerHTML = CONTACT_PAGE_CONTENT.cards
+      .map(
+        (card) => `
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="contact-info-card h-100">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <i class="${card.icon}"></i>
+              </div>
+              <h3 class="contact-info-card__title">${card.title}</h3>
+              <div class="contact-info-card__body">
+                ${card.lines
+                  .map((line) => `<p class="mb-0">${line}</p>`)
+                  .join("")}
+              </div>
+            </article>
+          </div>`,
+      )
+      .join("");
+  }
+
+  if (allMediaLinks && typeof SOCIAL_LINKS !== "undefined") {
+    allMediaLinks.innerHTML = SOCIAL_LINKS.map(
+      (link) => `
+        <a href="${link.url}" class="all-media-link" target="_blank" rel="noopener noreferrer">
+          <span class="all-media-link__icon" aria-hidden="true"><i class="${link.icon}"></i></span>
+          <span class="all-media-link__label">${link.label}</span>
+          <span class="all-media-link__value">${link.handle || link.value || link.url}</span>
+        </a>`,
+    ).join("");
+  }
+
+  if (freelanceLinks && typeof FREELANCE_PLATFORMS !== "undefined") {
+    freelanceLinks.innerHTML = FREELANCE_PLATFORMS.map(
+      (platform) => `
+        <a href="${platform.url}" class="hire-platform-link" target="_blank" rel="noopener noreferrer">
+          <span class="hire-platform-link__main">
+            <span class="hire-platform-link__badge" aria-hidden="true">${
+              platform.icon
+                ? `<i class="${platform.icon}"></i>`
+                : `${platform.badge || platform.label.charAt(0)}`
+            }</span>
+            <span>${platform.label}</span>
+          </span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>`,
+    ).join("");
   }
 
   // ── Random Quote ────────────────────────────────────────────────────────
