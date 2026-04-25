@@ -175,10 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const aboutHighlights = document.getElementById("about-highlights");
   if (aboutHighlights && typeof ABOUT_CONTENT !== "undefined") {
-    aboutHighlights.innerHTML = ABOUT_CONTENT.highlights
+    aboutHighlights.innerHTML = ABOUT_CONTENT.funFacts
       .map(
-        (item) =>
-          `<div class="col-auto"><div class="about-pill">${item}</div></div>`,
+        (item) => `<div class="col-auto"><div class="about-pill">${item}</div></div>`,
       )
       .join("");
   }

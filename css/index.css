@@ -597,6 +597,8 @@ a:hover {
   border: 1px solid var(--text-secondary);
   padding: 0.75rem 1rem;
   color: var(--text-secondary);
+  background-color: rgba(255, 255, 255, 0.01);
+  line-height: 1.5;
   transition:
     border-color 0.3s ease,
     color 0.3s ease,
@@ -644,9 +646,85 @@ a:hover {
   bottom: 110px;
 }
 
+.about-facts-section {
+  position: relative;
+}
+
+.about-facts-visual {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  min-height: 320px;
+}
+
+.about-facts-logo {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  left: 40px;
+  bottom: 30px;
+}
+
+.about-facts-shape {
+  position: absolute;
+  color: var(--text-secondary);
+}
+
+.about-facts-shape svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-facts-shape--grid-top {
+  width: 68px;
+  height: 68px;
+  top: 24px;
+  left: 34px;
+}
+
+.about-facts-shape--grid-bottom {
+  width: 92px;
+  height: 92px;
+  right: -8px;
+  bottom: 8px;
+}
+
+.about-facts-shape--square-back {
+  width: 84px;
+  height: 84px;
+  right: 72px;
+  top: 96px;
+  color: var(--primary-color);
+}
+
+.about-facts-shape--square-front {
+  width: 58px;
+  height: 58px;
+  right: 122px;
+  top: 146px;
+  color: var(--primary-color);
+}
+
 @media (max-width: 991.98px) {
   .about-hero-visual {
     max-width: 460px;
+  }
+
+  .about-facts-visual {
+    max-width: 300px;
+    min-height: 260px;
+  }
+
+  .about-facts-logo {
+    width: 96px;
+    right: 40px;
+    top: 108px;
+  }
+
+  .about-facts-shape--grid-bottom {
+    right: 0;
+    bottom: 0;
   }
 
   .about-hero-frame::before,

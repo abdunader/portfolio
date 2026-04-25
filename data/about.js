@@ -1,4 +1,4 @@
-// About page content and profile highlights
+// About page content and fun facts
 const ABOUT_CONTENT = {
   intro: [
     "Hello, I'm Abdelrahman.",
@@ -6,13 +6,12 @@ const ABOUT_CONTENT = {
     "I enjoy turning ideas into interfaces that are practical for users and easy for teams to maintain. Most of my work centers on modern HTML, CSS, JavaScript, and component-based UI development.",
     "I keep pushing my skills forward through hands-on projects, design implementation, and continuous learning across new tools and frameworks.",
   ],
-  highlights: [
-    "Based in Cairo, Egypt",
-    "Open to freelance work",
-    "Focused on responsive UI",
-    "Strong with HTML, CSS, and JavaScript",
-    "Building with React and Bootstrap",
-    "Comfortable with REST API integration",
-    "Always learning new tools",
+  funFacts: [
+    "I enjoy turning designs into clean, responsive interfaces",
+    "I care a lot about spacing, alignment, and visual polish",
+    "I like building pages from scratch, not just tweaking templates",
+    "I usually learn best by shipping real projects",
+    "I enjoy mixing minimal layouts with geometric visuals",
+    "I keep refining my portfolio as I grow my front-end skills",
   ],
 };
