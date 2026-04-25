@@ -162,6 +162,27 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => initMasonry("skills-grid"), 50);
   }
 
+  // ── About Page Content ───────────────────────────────────────────────────
+  const aboutIntro = document.getElementById("about-intro");
+  if (aboutIntro && typeof ABOUT_CONTENT !== "undefined") {
+    aboutIntro.innerHTML = ABOUT_CONTENT.intro
+      .map(
+        (paragraph, index) =>
+          `<p class="text-secondary-light mb-4">${paragraph}</p>`,
+      )
+      .join("");
+  }
+
+  const aboutHighlights = document.getElementById("about-highlights");
+  if (aboutHighlights && typeof ABOUT_CONTENT !== "undefined") {
+    aboutHighlights.innerHTML = ABOUT_CONTENT.highlights
+      .map(
+        (item) =>
+          `<div class="col-auto"><div class="about-pill">${item}</div></div>`,
+      )
+      .join("");
+  }
+
   // ── Random Quote ────────────────────────────────────────────────────────
   const quoteTextEl = document.getElementById("quote-text");
   const quoteAuthorEl = document.getElementById("quote-author");

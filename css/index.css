@@ -512,6 +512,152 @@ a:hover {
   z-index: 2;
 }
 
+.about-page-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-eyebrow {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.about-page-copy {
+  max-width: 560px;
+}
+
+.about-hero-visual {
+  max-width: 430px;
+}
+
+.about-hero-frame {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1rem 0;
+}
+
+.about-hero-frame::before,
+.about-hero-frame::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--text-secondary);
+  pointer-events: none;
+}
+
+.about-hero-frame::before {
+  width: 110px;
+  height: 110px;
+  left: -42px;
+  bottom: 42px;
+}
+
+.about-hero-frame::after {
+  width: 130px;
+  height: 130px;
+  right: -54px;
+  top: 34px;
+}
+
+.about-page-img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.about-floating-grid {
+  position: absolute;
+  color: var(--text-secondary);
+  z-index: 0;
+}
+
+.about-floating-grid svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-floating-grid--left {
+  width: 72px;
+  height: 72px;
+  left: -64px;
+  top: 80px;
+}
+
+.about-floating-grid--right {
+  width: 88px;
+  height: 88px;
+  right: -16px;
+  bottom: 70px;
+}
+
+.about-pill {
+  border: 1px solid var(--text-secondary);
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.about-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--primary-color);
+  background-color: rgba(199, 120, 221, 0.08);
+  transform: translateY(-2px);
+}
+
+.about-page-decoration {
+  position: absolute;
+  color: var(--text-secondary);
+  z-index: -1;
+}
+
+.about-page-decoration svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.about-page-decoration--top-right {
+  width: 88px;
+  height: 88px;
+  top: 120px;
+  right: -20px;
+}
+
+.about-page-decoration--mid-left {
+  width: 72px;
+  height: 72px;
+  top: 560px;
+  left: -76px;
+}
+
+.about-page-decoration--bottom-right {
+  width: 120px;
+  height: 120px;
+  right: -48px;
+  bottom: 110px;
+}
+
+@media (max-width: 991.98px) {
+  .about-hero-frame::before,
+  .about-hero-frame::after,
+  .about-page-decoration {
+    display: none;
+  }
+
+  .about-floating-grid--left {
+    left: -12px;
+  }
+
+  .about-floating-grid--right {
+    right: -8px;
+  }
+}
+
 /* Random Shapes */
 .random-shape {
   position: absolute;
@@ -524,7 +670,6 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-
 
 /* Contacts + Footer */
 .contacts-text {
