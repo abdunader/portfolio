@@ -245,7 +245,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="${platform.url}" class="hire-platform-link" target="_blank" rel="noopener noreferrer">
           <span class="hire-platform-link__main">
             <span class="hire-platform-link__badge" aria-hidden="true">${
-              platform.icon
+              platform.logo
+                ? `<img src="${platform.logo}" alt="" class="hire-platform-link__logo" loading="lazy" decoding="async">`
+                : platform.icon
                 ? `<i class="${platform.icon}"></i>`
                 : `${platform.badge || platform.label.charAt(0)}`
             }</span>

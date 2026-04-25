@@ -28,12 +28,12 @@ const FREELANCE_PLATFORMS = [
   {
     label: "Mostaql",
     url: "https://mostaql.com/",
-    badge: "M",
+    logo: "https://cdn.brandfetch.io/id68GGrF4m/w/250/h/250/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1771995192842",
   },
   {
     label: "Khamsat",
     url: "https://khamsat.com/",
-    badge: "K",
+    logo: "https://cdn.brandfetch.io/id3mTerzH0/w/250/h/250/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1769144159652",
   },
   {
     label: "Upwork",
@@ -43,11 +43,11 @@ const FREELANCE_PLATFORMS = [
   {
     label: "Freelancer",
     url: "https://www.freelancer.com/",
-    badge: "F",
+    logo: "https://cdn.brandfetch.io/id4yPzj0f-/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772392231983",
   },
   {
     label: "Nafezly",
     url: "https://nafezly.com/",
-    badge: "N",
+    logo: "https://cdn.brandfetch.io/idFvRNZmbR/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772609460060",
   },
 ];
