@@ -527,7 +527,9 @@ a:hover {
 }
 
 .about-hero-visual {
-  max-width: 430px;
+  max-width: 520px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .about-hero-frame {
@@ -643,6 +645,10 @@ a:hover {
 }
 
 @media (max-width: 991.98px) {
+  .about-hero-visual {
+    max-width: 460px;
+  }
+
   .about-hero-frame::before,
   .about-hero-frame::after,
   .about-page-decoration {
