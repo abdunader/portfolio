@@ -29,12 +29,22 @@ const PROJECTS = [
     liveUrl: "https://abdunader.github.io/fokir/",
     image: "./assets/images/projects/fokir.png",
   },
+  {
+    title: "Char-e-t",
+    description:
+      "Charity organization website enabling transparent donation and outreach.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "FontAwesome"],
+    liveUrl: "https://abdunader.github.io/Charity-Organization/",
+    githubUrl: "https://github.com/abdunader/Charity-Organization",
+    image: "./assets/images/projects/char-e-t.png",
+  },
 ];
 
 const SMALL_PROJECTS = [
   {
     title: "Discord Bot Boilerplate",
-    description: "Start creating scalable discord.js bot with typescript in seconds",
+    description:
+      "Start creating scalable discord.js bot with typescript in seconds",
     technologies: ["Discord.js", "TS", "JS"],
     githubUrl: "#",
     image: "./assets/images/projects/fokir.png", // Example image for small project
@@ -43,19 +53,21 @@ const SMALL_PROJECTS = [
     title: "My Blog",
     description: "Front-end of my future blog website written in vue",
     technologies: ["Vue", "CSS", "JS"],
-    githubUrl: "#"
+    githubUrl: "#",
   },
   {
     title: "Chess Pro",
-    description: "Figma landing page about service for viewing chess tournaments",
+    description:
+      "Figma landing page about service for viewing chess tournaments",
     technologies: ["Figma"],
-    liveUrl: "#"
+    liveUrl: "#",
   },
   {
     title: "Crash Protect Website",
-    description: "Figma template for website about anti-raid, anti-crash discord bot",
+    description:
+      "Figma template for website about anti-raid, anti-crash discord bot",
     technologies: ["Figma"],
-    liveUrl: "#"
+    liveUrl: "#",
   },
   {
     title: "Web Dev neovim config",
@@ -68,6 +80,6 @@ const SMALL_PROJECTS = [
     title: "Ooku",
     description: "Simple link shortener with auth",
     technologies: ["Python", "Quart", "HTML"],
-    liveUrl: "#"
-  }
+    liveUrl: "#",
+  },
 ];

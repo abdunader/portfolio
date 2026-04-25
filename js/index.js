@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (project.githubUrl) {
       actionButtons.push(
-        `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary-outline mt-2">GitHub</a>`,
+        `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-outline mt-2">GitHub</a>`,
       );
     }
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el && window.Masonry) {
       // Masonry configuration
       new Masonry(el, {
-        percentPosition: true
+        percentPosition: true,
       });
     }
   }
@@ -124,7 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const smallProjectsGrid = document.getElementById("small-projects-grid");
   if (smallProjectsGrid && typeof SMALL_PROJECTS !== "undefined") {
-    smallProjectsGrid.innerHTML = SMALL_PROJECTS.map(createProjectCard).join("");
+    smallProjectsGrid.innerHTML =
+      SMALL_PROJECTS.map(createProjectCard).join("");
     setTimeout(() => initMasonry("small-projects-grid"), 50);
   }
 
