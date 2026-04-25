@@ -336,7 +336,9 @@ a:hover {
   align-items: center;
   z-index: 1000;
   background-color: var(--bg-color);
-  transition-duration: inherit;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @media (min-width: 992px) {
