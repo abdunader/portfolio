@@ -985,6 +985,8 @@ a:hover {
   font-size: 1rem;
   margin: 0 0 1rem;
   color: var(--text-primary);
+  border-bottom: 1px solid var(--text-secondary);
+  width: fit-content;
 }
 
 .hire-platforms-list {

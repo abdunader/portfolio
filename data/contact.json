@@ -26,12 +26,12 @@
   "freelancePlatforms": [
     {
       "label": "Mostaql",
-      "url": "https://mostaql.com/",
+      "url": "https://mostaql.com/u/Abdu_Nader",
       "logo": "https://cdn.brandfetch.io/id68GGrF4m/w/250/h/250/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1771995192842"
     },
     {
       "label": "Khamsat",
-      "url": "https://khamsat.com/",
+      "url": "https://khamsat.com/user/abdu_nader",
       "logo": "https://cdn.brandfetch.io/id3mTerzH0/w/250/h/250/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1769144159652"
     },
     {
@@ -41,13 +41,20 @@
     },
     {
       "label": "Freelancer",
-      "url": "https://www.freelancer.com/",
+      "url": "https://www.freelancer.com/u/abdelrahmann21",
       "logo": "https://cdn.brandfetch.io/id4yPzj0f-/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772392231983"
-    },
+    }
+    ,
     {
       "label": "Nafezly",
-      "url": "https://nafezly.com/",
+      "url": "https://nafezly.com/u/Abdelrahman_Nader",
       "logo": "https://cdn.brandfetch.io/idFvRNZmbR/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772609460060"
+    }
+    ,
+    {
+      "label": "Kafiil",
+      "url": "https://kafiil.com/u/abdelrahman_nader",
+      "logo": "https://cdn.brandfetch.io/idweuu2YQY/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1770222982859"
     }
   ]
 }
