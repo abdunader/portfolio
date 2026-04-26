@@ -36,40 +36,41 @@
       "liveUrl": "https://abdunader.github.io/Charity-Organization/",
       "githubUrl": "https://github.com/abdunader/Charity-Organization",
       "image": "./assets/images/projects/char-e-t.png"
+    },
+    {
+      "title": "Intelligent Connect 6 Player",
+      "description": "Intelligent Connect 6 Player AI using Minimax algorithm with alpha-beta pruning",
+      "technologies": ["Python"],
+      "githubUrl": "https://github.com/College-Projects-HU/Intelligent-Connect-6-Player-AI",
+      "image": "./assets/images/projects/intelligent-connect-6-player.png"
     }
   ],
   "smallProjects": [
     {
-      "title": "Discord Bot Boilerplate",
-      "description": "Start creating scalable discord.js bot with typescript in seconds",
-      "technologies": ["Discord.js", "TS", "JS"],
-      "image": "./assets/images/projects/fokir.png"
+      "title": "Restaurant Ordering App",
+      "description": "Single-page mobile restaurant ordering app",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "liveUrl": "https://abdunader.github.io/Restaurant-Ordering-App/",
+      "image": "./assets/images/projects/restaurant-ordering-app.png"
     },
     {
-      "title": "My Blog",
-      "description": "Front-end of my future blog website written in vue",
-      "technologies": ["Vue", "CSS", "JS"]
+      "title": "Color Scheme Generator",
+      "description": "Interactive web color scheme generator and palette tool",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "liveUrl": "https://abdunader.github.io/Color-Scheme-Generator/",
+      "image": "./assets/images/projects/color-scheme-generator.png"
     },
     {
-      "title": "Chess Pro",
-      "description": "Figma landing page about service for viewing chess tournaments",
-      "technologies": ["Figma"]
+      "title": "Number System Wizards",
+      "description": "C program for multi-base number system conversions.",
+      "technologies": ["C"],
+      "githubUrl": "https://github.com/NumberSystemWizards/NumberSystem-Wizards"
     },
     {
-      "title": "Crash Protect Website",
-      "description": "Figma template for website about anti-raid, anti-crash discord bot",
-      "technologies": ["Figma"]
-    },
-    {
-      "title": "Web Dev neovim config",
-      "description": "Config for neovim perfect for web developer",
-      "technologies": ["Lua", "NeoVim"],
-      "image": "./assets/images/projects/bakery.png"
-    },
-    {
-      "title": "Ooku",
-      "description": "Simple link shortener with auth",
-      "technologies": ["Python", "Quart", "HTML"]
+      "title": "Elictricity Billing System",
+      "description": "Electricity Billing System for efficient billing and customer management.",
+      "technologies": ["Java", "Javafx", "CSS"],
+      "githubUrl": "https://github.com/College-Projects-HU/Electricity-Billing-System-PL2"
     }
   ]
 }
