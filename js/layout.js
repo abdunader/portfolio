@@ -101,7 +101,53 @@ function renderNav() {
   `;
 }
 
+function renderFooter() {
+  const footerRoot = document.getElementById("site-footer");
+  if (!footerRoot) return;
+
+  footerRoot.innerHTML = `
+    <footer class="site-footer py-4">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <img src="./assets/images/logo.png" alt="Logo" height="24" class="logo" />
+              <span class="fw-bold">Abdelrahman</span>
+            </div>
+            <p class="text-secondary-light mb-0">Front-end developer crafting responsive web experiences.</p>
+          </div>
+
+          <div>
+            <h5 class="mb-3">Media</h5>
+            <div id="footer-social-links" class="d-flex gap-3"></div>
+          </div>
+        </div>
+        <p class="text-center text-secondary-light small mb-0 mt-4">
+          &copy; <span id="footer-year"></span> Abdelrahman Nader. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  `;
+}
+
+function renderBackToTop() {
+  const backToTopRoot = document.getElementById("site-back-to-top");
+  if (!backToTopRoot) return;
+
+  backToTopRoot.innerHTML = `
+    <button
+      id="back-to-top"
+      class="btn btn-primary-outline back-to-top-btn"
+      type="button"
+      aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  `;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderSidebar();
   renderNav();
+  renderFooter();
+  renderBackToTop();
 });

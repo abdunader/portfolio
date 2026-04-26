@@ -1,0 +1,24 @@
+[
+  {
+    "label": "GitHub",
+    "icon": "fa-brands fa-github",
+    "url": "https://github.com/abdunader",
+    "handle": "@abdunader",
+    "value": "github.com/abdunader"
+  },
+  {
+    "label": "LinkedIn",
+    "icon": "fa-brands fa-linkedin",
+    "url": "https://www.linkedin.com/in/abdulrahman-nader",
+    "handle": "/in/abdulrahman-nader",
+    "value": "linkedin.com/in/abdulrahman-nader"
+  },
+  {
+    "label": "Upwork",
+    "icon": "fa-brands fa-upwork",
+    "url": "https://www.upwork.com/freelancers/~01050c889db0bc726f",
+    "handle": "ID: ~01050c889db0bc726f",
+    "value": "upwork.com/freelancers/~01050c889db0bc726f"
+  }
+  
+]

@@ -139,7 +139,7 @@
           <!-- Decorative left column -->
           <div class="col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
             <div class="skills-decoration">
-              <!-- data-shape injects the matching SVG from data/shapes.js -->
+              <!-- data-shape injects the matching SVG from data/shapes.json -->
               <div class="sd-item sd-dot-grid sd-top-left"     data-shape="dotGrid"></div>
               <div class="sd-item sd-square sd-top-right"      data-shape="squareOutline"></div>
               <img src="./assets/images/logo.png" class="logo sd-item sd-square sd-bottom-left"    ></img>
@@ -152,7 +152,7 @@
           <!-- Skill category boxes -->
           <div class="col-12 col-lg-8">
             <div class="row g-3 " id="skills-grid">
-              <!-- Skill boxes rendered dynamically from data/skills.js -->
+              <!-- Skill boxes rendered dynamically from data/skills.json -->
             </div>
           </div>
         </div>
@@ -305,50 +305,11 @@
       </section>
     </div>
 
-    <!-- Footer Section -->
-    <footer class="site-footer py-4">
-      <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
-          <div>
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <img src="./assets/images/logo.png" alt="Logo" height="24" class="logo" />
-              <span class="fw-bold">Abdelrahman</span>
-            </div>
-            <p class="text-secondary-light mb-0">Front-end developer crafting responsive web experiences.</p>
-          </div>
-
-          <div>
-            <h5 class="mb-3">Media</h5>
-            <div id="footer-social-links" class="d-flex gap-3"></div>
-          </div>
-        </div>
-        <p class="text-center text-secondary-light small mb-0 mt-4">
-          &copy; <span id="footer-year"></span> Abdelrahman Nader. All rights reserved.
-        </p>
-      </div>
-    </footer>
-
-    <button
-      id="back-to-top"
-      class="btn btn-primary-outline back-to-top-btn"
-      type="button"
-      aria-label="Back to top"
-    >
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <div id="site-footer"></div>
+    <div id="site-back-to-top"></div>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Project Data -->
-    <script src="./data/projects.js"></script>
-    <!-- Social Links Data -->
-    <script src="./data/social-links.js"></script>
-    <!-- Skills Data -->
-    <script src="./data/skills.js"></script>
-    <!-- Shape SVGs -->
-    <script src="./data/shapes.js"></script>
-    <!-- Quotes Data -->
-    <script src="./data/quotes.js"></script>
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Masonry Layout -->
