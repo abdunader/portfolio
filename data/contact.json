@@ -8,7 +8,10 @@
     "cards": [
       {
         "title": "Message me",
-        "lines": ["Use the contact form on this page", "I usually reply within 1 to 2 days"],
+        "lines": [
+          "Use the contact form on this page",
+          "I usually reply within 1 to 2 days"
+        ],
         "icon": "fa-regular fa-envelope"
       },
       {
@@ -18,7 +21,10 @@
       },
       {
         "title": "Best fit",
-        "lines": ["Landing pages, portfolio sites", "Responsive UI implementation"],
+        "lines": [
+          "Landing pages, portfolio sites",
+          "Responsive UI implementation"
+        ],
         "icon": "fa-solid fa-code"
       }
     ]
@@ -43,18 +49,74 @@
       "label": "Freelancer",
       "url": "https://www.freelancer.com/u/abdelrahmann21",
       "logo": "https://cdn.brandfetch.io/id4yPzj0f-/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772392231983"
-    }
-    ,
+    },
     {
       "label": "Nafezly",
       "url": "https://nafezly.com/u/Abdelrahman_Nader",
       "logo": "https://cdn.brandfetch.io/idFvRNZmbR/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1772609460060"
-    }
-    ,
+    },
     {
       "label": "Kafiil",
       "url": "https://kafiil.com/u/abdelrahman_nader",
       "logo": "https://cdn.brandfetch.io/idweuu2YQY/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1770222982859"
+    }
+  ],
+  "mediaLinks": [
+    {
+      "label": "Upwork",
+      "icon": "fa-brands fa-upwork",
+      "url": "https://www.upwork.com/freelancers/~01050c889db0bc726f",
+      "handle": "ID: ~01050c889db0bc726f",
+      "value": "upwork.com/freelancers/~01050c889db0bc726f"
+    },
+    {
+      "label": "GitHub",
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/abdunader",
+      "handle": "@abdunader",
+      "value": "github.com/abdunader"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "fa-brands fa-linkedin",
+      "url": "https://www.linkedin.com/in/abdulrahman-nader",
+      "handle": "abdulrahman-nader",
+      "value": "linkedin.com/in/abdulrahman-nader"
+    },
+    {
+      "label": "Email",
+      "icon": "fa-solid fa-envelope",
+      "url": "mailto:abdunh177@gmail.com",
+      "handle": "abdunh177@gmail.com",
+      "value": "abdunh177@gmail.com"
+    },
+    {
+      "label": "WhatsApp",
+      "icon": "fa-brands fa-whatsapp",
+      "url": "https://wa.me/201140959049",
+      "handle": "+201140959049",
+      "value": "wa.me/201140959049"
+    },
+    {
+      "label": "Telegram",
+      "icon": "fa-brands fa-telegram",
+      "url": "https://t.me/ANH1775",
+      "handle": "@ANH1775",
+      "value": "t.me/ANH1775"
+    },
+    {
+      "label": "Instagram",
+      "icon": "fa-brands fa-instagram",
+      "url": "https://www.instagram.com/_abdo.nader_",
+      "handle": "@_abdo.nader_",
+      "value": "instagram.com/_abdo.nader_"
+    },
+    {
+      "label": "Messenger",
+      "icon": "fa-brands fa-facebook-messenger",
+      "url": "https://www.facebook.com/messages/t/abdelrahman.nader.12/",
+      "handle": "@abdelrahman.nader.12",
+      "value": "facebook.com/messages/t/abdelrahman.nader.12"
     }
   ]
 }

@@ -238,20 +238,6 @@ function initSocialLinks(socialLinks) {
   renderSocialIcons("social-sidebar-links", "social-icon", socialLinks);
   renderSocialIcons("social-mobile-links", "text-secondary-light fs-1", socialLinks);
   renderSocialIcons("footer-social-links", "footer-social-icon", socialLinks);
-
-  const allMediaLinks = document.getElementById("all-media-links");
-  if (!allMediaLinks) return;
-
-  allMediaLinks.innerHTML = socialLinks
-    .map(
-      (link) => `
-        <a href="${link.url}" class="all-media-link" target="_blank" rel="noopener noreferrer">
-          <span class="all-media-link__icon" aria-hidden="true"><i class="${link.icon}"></i></span>
-          <span class="all-media-link__label">${link.label}</span>
-          <span class="all-media-link__value">${link.handle || link.value || link.url}</span>
-        </a>`,
-    )
-    .join("");
 }
 
 function initSkills(skills) {
@@ -286,6 +272,7 @@ function initContactPage(contactData) {
   const contactPageEyebrow = document.getElementById("contact-page-eyebrow");
   const contactPageIntro = document.getElementById("contact-page-intro");
   const freelanceLinks = document.getElementById("freelance-links");
+  const allMediaLinks = document.getElementById("all-media-links");
   const pageContent = contactData.pageContent || {};
 
   if (contactPageEyebrow) {
@@ -308,6 +295,18 @@ function initContactPage(contactData) {
               <span>${platform.label}</span>
             </span>
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>`,
+      )
+      .join("");
+  }
+
+  if (allMediaLinks) {
+    allMediaLinks.innerHTML = (contactData.mediaLinks || [])
+      .map(
+        (link) => `
+          <a href="${link.url}" class="all-media-link" target="_blank" rel="noopener noreferrer">
+            <span class="all-media-link__icon" aria-hidden="true"><i class="${link.icon}"></i></span>
+            <span class="all-media-link__value">${link.handle || link.value || link.url}</span>
           </a>`,
       )
       .join("");
