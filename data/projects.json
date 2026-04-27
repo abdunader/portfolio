@@ -43,6 +43,20 @@
       "technologies": ["Python"],
       "githubUrl": "https://github.com/College-Projects-HU/Intelligent-Connect-6-Player-AI",
       "image": "./assets/images/projects/intelligent-connect-6-player.png"
+    },
+    {
+      "title": "My Portfolio",
+      "description": "You are here.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "FontAwesome",
+        "Bootstrap",
+        "Masonry.js"
+      ],
+      "githubUrl": "https://github.com/abdunader/portfolio",
+      "image": "./assets/images/projects/my-portfolio.png"
     }
   ],
   "smallProjects": [
