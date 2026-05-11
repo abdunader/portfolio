@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "title": "ITAMS",
+      "description": "An enterprise asset management system, It allows organizations to track IT assets",
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Spring Boot",
+        "Eureka",
+        "Docker"
+      ],
+      "githubUrl": "https://github.com/College-Projects-HU/Assets-Tracking-System-SE2",
+      "image": "./assets/images/projects/assets-tracking-system.png"
+    },
+    {
       "title": "Game Masters",
       "description": "Gaming store for PC, PlayStation, Xbox platforms",
       "technologies": ["HTML5", "CSS3", "JavaScript", "FontAwesome", "AOS"],
