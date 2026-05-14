@@ -15,6 +15,14 @@
       "image": "./assets/images/projects/assets-tracking-system.png"
     },
     {
+      "title": "Flowbit",
+      "description": "A project management system that helps teams organize tasks and track project progress.",
+      "technologies": ["React.js", ".Net", "Bootstrap"],
+      "liveUrl": "https://task-flow-ia-kappa.vercel.app",
+      "githubUrl": "https://github.com/College-Projects-HU/Task-Flow-IA",
+      "image": "./assets/images/projects/flowbit.png"
+    },
+    {
       "title": "Game Masters",
       "description": "Gaming store for PC, PlayStation, Xbox platforms",
       "technologies": ["HTML5", "CSS3", "JavaScript", "FontAwesome", "AOS"],
