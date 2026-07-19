@@ -235,7 +235,7 @@ a:hover {
 .status-dot {
   width: 16px;
   height: 16px;
-  background-color: var(--primary-color);
+  background-color: #6ec531;
   display: inline-block;
   vertical-align: middle;
 }
