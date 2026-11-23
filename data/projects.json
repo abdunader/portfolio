@@ -23,6 +23,22 @@
       "image": "./assets/images/projects/flowbit.png"
     },
     {
+      "title": "Assembly: Endgame",
+      "description": "A word guessing game built with React.js",
+      "technologies": ["React.js", "CSS3"],
+      "liveUrl": "https://assembly-endgame-one-mocha.vercel.app/",
+      "githubUrl": "https://github.com/abdunader/Assembly-Endgame",
+      "image": "./assets/images/projects/assembly-endgame.png"
+    },
+    {
+      "title": "Tenzies Game",
+      "description": "A simple dice game built with React.js",
+      "technologies": ["React.js", "CSS3"],
+      "liveUrl": "https://tenzies-game-alpha-seven.vercel.app/",
+      "githubUrl": "https://github.com/abdunader/Tenzies-Game",
+      "image": "./assets/images/projects/tenzies-game.png"
+    },
+    {
       "title": "Game Masters",
       "description": "Gaming store for PC, PlayStation, Xbox platforms",
       "technologies": ["HTML5", "CSS3", "JavaScript", "FontAwesome", "AOS"],
